@@ -1,23 +1,18 @@
-# DCGAN on CIFAR-10
+# 🚀 Deep Convolutional GAN (DCGAN) on CIFAR-10
 
-## Overview
-This project trains a Deep Convolutional Generative Adversarial Network (DCGAN) on the CIFAR-10 dataset.
+This project implements a **Deep Convolutional Generative Adversarial Network (DCGAN)** using **PyTorch** to generate realistic images from the **CIFAR-10 dataset**. 
 
-## Dataset Preprocessing
-- CIFAR-10 images are resized to `32x32` pixels.
-- Images are normalized to `[-1,1]` for stable GAN training.
+✅ **Key Features**:
+- Uses **A100 GPU optimization** (AMP for mixed precision training)
+- **DCGAN architecture** (Generator & Discriminator)
+- **Trained on CIFAR-10** dataset (airplanes, cars, animals, etc.)
+- **Saves generated images** and model checkpoints
+- **Supports inference** to generate new images
 
-## Training the Model
-### **Step 1: Install Dependencies**
+---
 
-### **Step 2: Run Training**
-- Trains DCGAN for 50 epoch.
-- Saves generated images at the end of training.
+## 📌 **Installation**
+Make sure you have **PyTorch with CUDA support** installed. Run the following command:
 
-## Expected Outputs
-After training, the model will generate **fake CIFAR-10 images** resembling objects like cars, cats, and airplanes.
-
-## Deployment Requirements
-- Python 3.8+
-- PyTorch 2.0+
-- NVIDIA GPU (Recommended)
+```sh
+pip install torch torchvision torchaudio matplotlib numpy tqdm
