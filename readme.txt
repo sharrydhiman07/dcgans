@@ -1,18 +1,58 @@
-# 🚀 Deep Convolutional GAN (DCGAN) on CIFAR-10
+# 🧠 DCGAN – Deep Convolutional GAN for Image Generation
 
-This project implements a **Deep Convolutional Generative Adversarial Network (DCGAN)** using **PyTorch** to generate realistic images from the **CIFAR-10 dataset**. 
-
-✅ **Key Features**:
-- Uses **A100 GPU optimization** (AMP for mixed precision training)
-- **DCGAN architecture** (Generator & Discriminator)
-- **Trained on CIFAR-10** dataset (airplanes, cars, animals, etc.)
-- **Saves generated images** and model checkpoints
-- **Supports inference** to generate new images
+This project implements a Deep Convolutional Generative Adversarial Network (DCGAN) to generate realistic images from random noise. It uses PyTorch to define both the generator and discriminator, and trains the model on a dataset of images.
 
 ---
 
-## 📌 **Installation**
-Make sure you have **PyTorch with CUDA support** installed. Run the following command:
+## 🌟 Features
 
-```sh
-pip install torch torchvision torchaudio matplotlib numpy tqdm
+- 🧑‍🎨 Generates new images using a trained generator
+- 🕹️ Discriminator and generator trained adversarially
+- 🎯 Supports custom image size and dataset
+- 🖼️ Real-time training output saved to disk
+
+---
+
+## 🛠️ Tech Stack
+
+- Python 3.x
+- PyTorch
+- torchvision
+- NumPy
+- Matplotlib / PIL
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repo
+
+git clone https://github.com/sharrydhiman07/dcgans.git
+cd dcgans
+
+2. Install dependencies
+
+pip install torch torchvision numpy matplotlib pillow
+
+3. Run the training script
+
+python dcgan.py
+🧾 Model Summary
+Generator: Uses transposed convolutions to upscale random noise into 64x64 images.
+
+Discriminator: A CNN-based binary classifier that tries to distinguish real from fake images.
+
+Loss: Binary Cross Entropy (BCE)
+
+Optimizer: Adam (lr=0.0002, beta1=0.5)
+
+
+
+
+📦 Folder Structure
+
+dcgans/
+├── dcgan.py               # Main training script
+├── dataset/               # Training images (e.g., CelebA, MNIST, custom)
+├── output/                # Generated images per epoch
+├── README.md
